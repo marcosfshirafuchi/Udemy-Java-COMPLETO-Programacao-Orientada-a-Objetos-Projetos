@@ -9,6 +9,12 @@ public class Account {
 
     }
 
+    public Account(Integer number, String holder, Double balance) {
+        this.number = number;
+        this.holder = holder;
+        this.balance = balance;
+    }
+
     public Integer getNumber() {
         return number;
     }
@@ -26,10 +32,10 @@ public class Account {
     }
 
     public void deposit(double amount){
-
+        this.balance += amount;
     }
 
     public void withdraw(double amount){
-
+        this.balance = balance - amount - 5.00;
     }
 }
