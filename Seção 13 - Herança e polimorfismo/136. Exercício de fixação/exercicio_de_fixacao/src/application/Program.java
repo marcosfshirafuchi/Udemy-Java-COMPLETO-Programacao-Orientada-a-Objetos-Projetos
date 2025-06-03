@@ -41,7 +41,7 @@ public class Program {
                 products.add(new Product(nome,price));
             }
         }
-        
+
         System.out.println();
 
         for (Product p : products){
