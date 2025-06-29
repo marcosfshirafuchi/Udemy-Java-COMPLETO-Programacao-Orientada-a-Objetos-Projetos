@@ -1,6 +1,7 @@
 package application;
 
 import entities.Contract;
+import entities.Installment;
 import services.ContractService;
 
 import java.time.LocalDate;
@@ -29,6 +30,9 @@ public class Program {
         ContractService contractService = new ContractService(null);
         contractService.processContract(obj,n);
         System.out.println("Parcelas:");
+        for (Installment installment : obj.getInstallments()){
+            System.out.println(installment);
+        }
         sc.close();
     }
 }
