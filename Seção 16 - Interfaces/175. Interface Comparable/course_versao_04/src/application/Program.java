@@ -36,7 +36,7 @@ public class Program {
      * @version 1.0
      * @since 02/07/2025
      */
-    
+
     public static void main(String[] args) {
         List<Employee> list = new ArrayList();
         String path = "C:\\temp\\in3.txt";
