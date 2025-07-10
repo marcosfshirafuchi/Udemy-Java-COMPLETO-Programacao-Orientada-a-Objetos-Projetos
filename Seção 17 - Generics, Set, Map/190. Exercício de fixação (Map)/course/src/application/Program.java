@@ -17,20 +17,20 @@ public class Program {
      * arquivo, e daí gerar um relatório consolidado com os totais de cada
      * candidato.<br><br>
      * Input file example:<br>
-     * Alex Blue,15
-     * Maria Green,22
-     * Bob Brown,21
-     * Alex Blue,30
-     * Bob Brown,15
-     * Maria Green,27
-     * Maria Green,22
-     * Bob Brown,25
-     * Alex Blue,31
-     * Execution:
-     * Enter file full path: c:\temp\in.txt
-     * Alex Blue: 76
-     * Maria Green: 71
-     * Bob Brown: 61
+     * Alex Blue,15<br>
+     * Maria Green,22<br>
+     * Bob Brown,21<br>
+     * Alex Blue,30<br>
+     * Bob Brown,15<br>
+     * Maria Green,27<br>
+     * Maria Green,22<br>
+     * Bob Brown,25<br>
+     * Alex Blue,31<br><br>
+     * Execution:<br>
+     * Enter file full path: c:\temp\in.txt<br>
+     * Alex Blue: 76<br>
+     * Maria Green: 71<br>
+     * Bob Brown: 61<br>
      * <br>
      * <p>
      * <b>Note:</b> Desenvolvido na linguagem Java.
