@@ -1,20 +1,21 @@
 package application;
 
 import entities.Product;
+import util.UpperCaseName;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
-public class Program05 {
-
+public class Program {
     /**
      * <h1> Udemy Java COMPLETO Programação Orientada a Objetos Projetos:<br><br>
      * Seção 18 - Programação funcional e expressões lambda</h1><br><br>
-     * <b>196. Predicate<br><br></b>
+     * <b>198. Function<br><br></b>
      * Problema exemplo<br><br>
-     * Fazer um programa que, a partir de uma lista de produtos, remova da
-     * lista somente aqueles cujo preço mínimo seja 100.<br><br>
+     * Fazer um programa que, a partir de uma lista de produtos, gere uma
+     * nova lista contendo os nomes dos produtos em caixa alta.<br><br>
      * List<Product> list = new ArrayList<>();<br><br>
      * list.add(new Product("Tv", 900.00));<br>
      * list.add(new Product("Mouse", 50.00));<br>
@@ -37,13 +38,15 @@ public class Program05 {
         list.add(new Product("Tablet", 350.50));
         list.add(new Product("HD Case", 80.90));
 
-        //5ª forma: Expressão lambda inline
-        double min = 100.0;
+        //1ª forma: Implementação da interface
+        //Converte List para stream: .stream()
+        List<String> names = list.stream()
+                //O map gera uma nova stream com os elementos transformados
+                //O map aplica a função(UpperCaseName) em cada elemento da lista
+                .map(new UpperCaseName())
+                        //Stream para List: .collect(Collectors.toList())
+                        .collect(Collectors.toList());
 
-        list.removeIf(p -> p.getPrice() >= min);
-
-        for (Product p : list){
-            System.out.println(p);
-        }
+        names.forEach(System.out::println);
     }
 }
